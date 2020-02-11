@@ -1,0 +1,21 @@
+<effect_group tiered="false">
+		<!-- used on self -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="30"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healthIncrease" operation="set" value="@healthPerkIncrease"/>
+		<display_value name="foodHealthAmount" value="30"/>
+
+		<!-- used on other -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="30"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+</effect_group>
+
+<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
