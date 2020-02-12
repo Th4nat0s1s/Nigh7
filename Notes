@@ -18,6 +18,9 @@ Boiled Water:
 Goldenrod Tea, Yucca Juice, Coffee, Beer, Grain Alcohol, Red Tea, etc:
 	Stack=25 FIN
 
+Coal:
+	Adjust cook time=2:55 FIN
+
 Dart Gun: 
 	Item - WIP
 	Recipe - WIP
