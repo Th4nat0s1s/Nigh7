@@ -1,7 +1,22 @@
 Notes:
 
-Spike Trap:
-Recipe Adjust - Fin
+!!!NOTE!!! 
+<property name="Material" value="??????????"/> <property name="Weight" value="??"/>
+	!!! To be used for salvage notation!!!
+
+
+
+Wood Spike Trap:
+	Recipe Adjust - Fin
+
+Repair Kit:
+	Stack=50 FIN
+
+Boiled Water:
+	Stack=50 FIN
+
+Goldenrod Tea, Yucca Juice, Coffee, Beer, Grain Alcohol, Red Tea, etc:
+	Stack=25 FIN
 
 Dart Gun: 
 	Item - WIP
@@ -30,3 +45,9 @@ Acid Dart:
 
 Painkillers:
 	Recipe - WIP
+	
+Repeating Iron Crossbow: (gunCrossbowIronRepeater)
+	Item -Start
+		Magazine=10
+	Recipe - Start
+		
