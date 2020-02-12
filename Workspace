@@ -14,6 +14,9 @@
 			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
 </effect_group>
 
+
+
+
 <property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
