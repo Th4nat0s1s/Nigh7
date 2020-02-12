@@ -26,6 +26,7 @@ Dart Gun:
 	Recipe - WIP
 		Mechanical Parts=6
 		Forged Iron=8
+	Sound - WIP
 
 Healing Dart:
 	Item - WIP
@@ -34,7 +35,7 @@ Healing Dart:
 		Dart=6
 
 Healing Agent:
-	Item - Start
+	Item - WIP
 	Recipe - WIP
 		Aloe
 		Painkiller
