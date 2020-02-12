@@ -4,18 +4,29 @@ Spike Trap:
 Recipe Adjust - Fin
 
 Dart Gun: 
-Item - WIP
-Recipe - WIP
+	Item - WIP
+	Recipe - WIP
+		Mechanical Parts=6
+		Forged Iron=8
 
 Healing Dart:
-Item - WIP
-Recipe - WIP
+	Item - WIP
+	Recipe - WIP
+		Healing Agent
+		Dart=6
 
 Healing Agent:
-Item - Start
-Recipe - Start
+	Item - Start
+	Recipe - WIP
+		Aloe
+		Painkiller
+		Water?
 
-Rad Dart:
-Item - Start
-Recipe - Start
+Acid Dart:
+	Item - Start
+	Recipe - Start
+		Acid
+		Dart 6
 
+Painkillers:
+	Recipe - WIP
