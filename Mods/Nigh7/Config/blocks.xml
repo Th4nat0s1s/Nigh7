@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<Nigh7>
 
-<blocks>
+<append xpath="/blocks">
 
 <block name="cntWallOvenWorking">
 	<property name="Extends" value="campfire"/>
@@ -39,4 +39,6 @@
 	<property name="SortOrder1" value="70i0"/>
 </block>
 
-</blocks>
+</append>
+
+</Nigh7>

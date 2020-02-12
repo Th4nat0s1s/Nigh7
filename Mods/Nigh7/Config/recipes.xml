@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<Nigh7>
 
-<recipes>
+<append xpath="/recipes">
 
 <recipe name="gunDartPistol" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
 	<ingredient name="resourceMechanicalParts" count="6"/>
@@ -13,15 +13,15 @@
 	</effect_group>
 </recipe>
 
-<recipe name="ammoDartIronHealing" count="2" craft_area="workbench" tags="">
+<recipe name="ammoDartIronHealing" count="6"  tags="">
 	<ingredient name="ammoDartIron" count="6"/>
-	<ingredient name="HealingAgent" count="1"/>
+	<ingredient name="medicalHealingAgent" count="1"/>
 </recipe>
 
 <recipe name="medicalHealingAgent" count="1" craft_area="chemistryStation" tags="">
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="drugPainkillers" count="1"/>
-	<ingredient name="drinkCanBoiledWater" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
 </recipe>
 
 <recipe name="drugPainkillers" count="2" craft_area="chemistryStation" tags="">
@@ -30,4 +30,6 @@
 	<ingredient name="resourceAnimalFat" count="1"/>
 </recipe>
 
-</recipes>
+</append>
+
+</Nigh7>

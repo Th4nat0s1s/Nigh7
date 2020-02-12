@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<Nigh7>
 
-<items>
+<append xpath="/items">
 
 <item name="gunDartPistol"> <!-- T2 pistols -->
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,selfLoading,attAgility,perkGunslinger,9mmGun,canHaveCosmetic"/>
@@ -143,7 +143,7 @@
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<!-- <property name="Material" value="MresourceCoal"/> -->
+	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="500"/> <!-- STK resource -->
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="10"/>
@@ -151,4 +151,6 @@
 	<property name="CraftingIngredientTime" value="10"/>
 </item>
 
-</items>
+</append>
+
+</Nigh7>

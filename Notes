@@ -3,9 +3,10 @@ Notes:
 !!!NOTES!!! 
 
 <property name="Material" value="??????????"/> <property name="Weight" value="??"/>
-	!!! To be used for salvage notation!!!
+	!!! To be used for salvage notation !!!
 
-
+<append xpath="/items">
+	!!! Must be placed at the beginning of most XML files to 'append' vanilla ones. !!!
 
 Wood Spike Trap:
 	Recipe Adjust - Fin
