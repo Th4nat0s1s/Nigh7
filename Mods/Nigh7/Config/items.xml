@@ -55,10 +55,10 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="180"/>
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="360"/>
 		<passive_effect name="BurstRoundCount" operation="base_set" value="2"/>
 
-		<passive_effect name="MagazineSize" operation="base_set" value="30"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="26"/>
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> <!-- 2s -->
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
@@ -101,12 +101,12 @@
 	<property name="HoldType" value="45"/>
 	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Stacknumber" value="240"/> <!-- STK ammo -->
+	<property name="Stacknumber" value="250"/> <!-- STK ammo -->
 	<property name="EconomicValue" value="34"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="DisplayType" value="ammoDart"/>
 	<property class="Action1">
-		<property name="Velocity" value="55"/>
+		<property name="Velocity" value="65"/>
 		<property name="Gravity" value="-4"/>
 		<property name="LifeTime" value="2"/>
 	</property>
@@ -115,12 +115,12 @@
 		<property name="BlockDamage" value="3,8"/>
 		<!-- <property name="ApplyBuff" value=".3,.3" param1="buffArrowCriticalBleedout"/> -->
 	</property>
-	<effect_group name="ammoDartIron" tiered="false">
-		<passive_effect name="EntityDamage" operation="base_set" value="45"/>
+	<effect_group name="ammoDartIronHealing" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
-		<passive_effect name="ProjectileVelocity" operation="base_set" value="55"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="65"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<!-- used on self -->
@@ -149,6 +149,10 @@
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="Group" value="Medical"/>
 	<property name="CraftingIngredientTime" value="10"/>
+</item>
+
+<item name="drinkJarBoiledWater">
+	<property name="Stacknumber" value="50"/>
 </item>
 
 </append>
