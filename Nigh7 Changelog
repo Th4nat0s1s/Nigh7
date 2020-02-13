@@ -2,7 +2,7 @@ Sob3k's Rebalance
 
 Changelog
 
-=== 0.1 ===
+=== 0.3 ===
 
 - Reduced Wood Spike Trap cost from 20 Wood to 15 Wood
 
@@ -12,5 +12,34 @@ Changelog
 	Healing Agent
 	
 - Added Blocks
+	Electric Stove
+
+- Adjusted Stacks
+	Painkiller
+	Herbal Antibiotics
+	Antibiotics
+	Vitamins
+	Recog
+	Fort Bites
+	Honey
+	Bandages
+	Medical Bandages
+	First Aid Kits
 	
+	Boiled Water
+	Mineral Water
+	Yucca Juice
+	Goldenrod Tea
+	Red Tea
+	Yucca Smoothie
+	Coffee
+	Beer
+	Grain Alcohol
+	Gpas Moonshine
+	Gpas Awesome Sauce
+	Gpas Learnin Elixir
+	Gpas Forgettin Elixir
+
+- Miscellaneous Adjustments
+	Coal fuel time raised from 00:20 to 02:55
 	

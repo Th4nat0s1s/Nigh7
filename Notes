@@ -14,7 +14,7 @@ Repeating Iron Crossbow: (gunCrossbowIronRepeater)
 	Recipe - Start
 
 Wood Spike Trap:
-	Recipe Adjust - Fin
+	Recipe Adjust - FIN
 
 Repair Kit:
 	Stack=50 FIN
@@ -56,13 +56,13 @@ Acid Dart: (ammoDartIronAcid)
 
 Painkillers:
 	Recipe - WIP
-	Stack=50
+	Stack=50 FIN
 
 Antibiotics n Vitamins:
-	Stack=50
+	Stack=50 FIN
 		
 Bandages (All):
-	Stack=25
+	Stack=25 FIN
 
 First Aid Kit:
-	Stack=25
+	Stack=10 FIN

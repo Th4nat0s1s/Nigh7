@@ -2,40 +2,43 @@
 
 <append xpath="/blocks">
 
-<block name="cntWallOvenWorking">
-	<property name="Extends" value="campfire"/>
+<block name="campfireOven">
+	<property name="DescriptionKey" value="campfireOven"/>
 	<property name="Class" value="Campfire"/>
-	<property name="Material" value="Mmetal"/>
+	<property name="CustomIcon" value="cntWallOven"/>
+	<property name="Material" value="Mmetal_weak"/>
 	<property name="Texture" value="346,345,341,345,262,345"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
-	
-	<property class="Workstation">
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
-	<property name="CraftActionName" value="lblContextActionCook"/>
-	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+	<property name="Stacknumber" value="1"/>
 	<property name="OpenSound" value="UseActions/open_mailbox"/>
 	<property name="CloseSound" value="UseActions/close_mailbox"/>
-	<property name="CraftSound" value="campfire_cook_click"/>
-	<property name="CraftCompleteSound" value="campfire_complete_item"/>
-	<property name="WorkstationJournalTip" value="heatMapTip"/>
-	<property name="PickupJournalEntry" value="campfireTip"/>
-
+	<property name="SortOrder1" value="70i0"/>
+	
+	<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+	<property name="MaxDamage" value="250"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> </property>
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,2" tag="salvageHarvest"/>
+	<property name="CanPickup" value="true"/>
+	<property name="TakeDelay" value="25"/>
+	
+	<property name="RuntimeSwitch" value="true"/>
+	<property name="DisplayType" value="blockElectrical"/>
+	<property name="RequiredPower" value="10"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="WorkstationJournalTip" value="heatMapTip"/>
+	<property name="PickupJournalEntry" value="campfireTip"/>
+	
+	<property class="Workstation">
+		<property name="Modules" value="tools,output,input"/>
+		<property name="CraftingAreaRecipes" value="campfire"/>
+	</property>
+	
+	<property name="ImposterDontBlock" value="true"/>
 	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
-	<property name="DescriptionKey" value="campfireDesc"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
 </block>
 
 </append>

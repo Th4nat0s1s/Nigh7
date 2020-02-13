@@ -1,6 +1,6 @@
 <Nigh7>
 	<append xpath="/xui/ruleset">
-	<window_group name="workstation_cntWallOvenWorking" controller="XUiC_WorkstationWindowGroup">
+	<window_group name="workstation_campfireOven" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
