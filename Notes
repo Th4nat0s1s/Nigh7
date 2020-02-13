@@ -8,6 +8,11 @@ Notes:
 <append xpath="/items">
 	!!! Must be placed at the beginning of most XML files to 'append' vanilla ones. !!!
 
+Repeating Iron Crossbow: (gunCrossbowIronRepeater)
+	Item -Start
+		Magazine=10
+	Recipe - Start
+
 Wood Spike Trap:
 	Recipe Adjust - Fin
 
@@ -30,20 +35,20 @@ Dart Gun:
 		Forged Iron=8
 	Sound - WIP
 
-Healing Dart:
+Healing Dart: (ammoDartIronHealing)
 	Item - WIP
 	Recipe - WIP
 		Healing Agent
 		Dart=6
 
-Healing Agent:
+Healing Agent: (medicalHealingAgent)
 	Item - WIP
 	Recipe - WIP
 		Aloe
 		Painkiller
 		Water?
 
-Acid Dart:
+Acid Dart: (ammoDartIronAcid)
 	Item - Start
 	Recipe - Start
 		Acid
@@ -51,9 +56,13 @@ Acid Dart:
 
 Painkillers:
 	Recipe - WIP
-	
-Repeating Iron Crossbow: (gunCrossbowIronRepeater)
-	Item -Start
-		Magazine=10
-	Recipe - Start
+	Stack=50
+
+Antibiotics n Vitamins:
+	Stack=50
 		
+Bandages (All):
+	Stack=25
+
+First Aid Kit:
+	Stack=25
