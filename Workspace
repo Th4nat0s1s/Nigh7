@@ -98,3 +98,5 @@
 </block>
 
 <!-- End Oven Code -->
+
+	<property name="CustomIcon" value="gunDartPistol"/>
