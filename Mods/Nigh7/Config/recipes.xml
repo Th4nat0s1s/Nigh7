@@ -31,9 +31,9 @@
 
 <recipe name="resourceNapalm" count="5" craft_area="chemistryStation" tags="">
 	<ingredient name="resourceAnimalFat" count="1"/>
-	<ingredient name="resourceGunPowder" count="1"/>
+	<ingredient name="resourceBone" count="1"/>
 	<ingredient name="drinkJarBoiledWater" count="1"/>
-        <ingredient name="resourceGasoline" count="1"/>
+    <ingredient name="ammoGasCan" count="1"/>
 </recipe>
 
 <recipe name="drugPainkillers" count="2" craft_area="chemistryStation" tags="">

@@ -33,7 +33,7 @@ Dart Gun:
 	Recipe - WIP
 		Mechanical Parts=6
 		Forged Iron=8
-	Sound - WIP
+	Sound - FIN
 
 Healing Dart: (ammoDartIronHealing)
 	Item - WIP
@@ -48,10 +48,10 @@ Healing Agent: (medicalHealingAgent)
 		Painkiller
 		Water?
 
-Acid Dart: (ammoDartIronAcid)
+Napalm Dart: (ammoDartPistolNapalm)
 	Item - Start
 	Recipe - Start
-		Acid
+		Napalm
 		Dart 6
 
 Painkillers:
