@@ -13,14 +13,25 @@
 	</effect_group>
 </recipe>
 
-<recipe name="ammoDartIronHealing" count="6"  tags="">
-	<ingredient name="ammoDartIron" count="6"/>
+<recipe name="ammoDartPistolHealing" count="6"  tags="">
+	<ingredient name="ammoDartPistol" count="6"/>
 	<ingredient name="medicalHealingAgent" count="1"/>
 </recipe>
 
-<recipe name="medicalHealingAgent" count="1" craft_area="chemistryStation" tags="">
+<recipe name="medicalHealingAgent" count="5" craft_area="chemistryStation" tags="">
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="drugPainkillers" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="ammoDartPistolNapalm" count="6" tags="">
+	<ingredient name="ammoDartPistol" count="6"/>
+	<ingredient name="resourceNapalm" count="1"/>
+</recipe>
+
+<recipe name="resourceNapalm" count="5" craft_area="chemistryStation" tags="">
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<ingredient name="resourceGunPowder" count="1"/>
 	<ingredient name="drinkJarBoiledWater" count="1"/>
 </recipe>
 

@@ -30,7 +30,7 @@
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="ammoDartIron,ammoDartIronHealing,ammoDartIronAcid,ammoDartIronInfect"/>
+		<property name="Magazine_items" value="ammoDartPistol,ammoDartPistolHealing,ammoDartPistolNapalm,ammoDartPistolInfect"/>
 		<property name="Sound_start" value="crossbow_fire"/> <!-- Adjust Sound to crossbow?-->
 		<property name="Sound_loop" value="crossbow_fire"/> <!-- Adjust Sound to crossbow?-->
 		<property name="Sound_end" value=""/>
@@ -98,8 +98,50 @@
 	</effect_group>
 </item>
 
-<item name="ammoDartIronHealing">
-	<property name="CustomIcon" value="ammoDartIronHealing"/>
+<item name="ammoDartPistol">
+	<property name="CustomIcon" value="ammoDartPistol"/>
+	<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
+	<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Stacknumber" value="500"/> <!-- STK ammo -->
+	<property name="EconomicValue" value="34"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="DisplayType" value="ammoDart"/>
+	<property class="Action1">
+		<property name="Velocity" value="55"/>
+		<property name="Gravity" value="-4"/>
+		<property name="LifeTime" value="2"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="15,30"/>
+		<property name="BlockDamage" value="4,10"/>
+		<!-- <property name="ApplyBuff" value=".3,.3" param1="buffArrowCriticalBleedout"/> -->
+	</property>
+	<effect_group name="ammoDartIron" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="45"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="55"/>
+	</effect_group>
+</item>
+
+<item name="medicalHealingAgent">
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Medical"/>
+	<property name="CraftingIngredientTime" value="10"/>
+</item>
+
+<item name="ammoDartPistolHealing">
+	<property name="CustomIcon" value="ammoDartPistolHealing"/>
 	<property name="Extends" value="ammoArrowIron" param1="HandMeshfile"/>
 	<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
 	<property name="HoldType" value="45"/>
@@ -149,7 +191,7 @@
 	</effect_group>
 </item>
 
-<item name="medicalHealingAgent">
+<item name="resourceNapalm">
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -159,6 +201,58 @@
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="Group" value="Medical"/>
 	<property name="CraftingIngredientTime" value="10"/>
+</item>
+
+<item name="ammoDartPistolNapalm">
+	<property name="CustomIcon" value="ammoDartPistolNapalm"/>
+	<property name="Extends" value="ammoArrowIron"/>
+	<property name="DisplayType" value="ammoArrowFlaming"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab.prefab"/>
+	<property name="StickyMeshFile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab.prefab"/>
+	<property name="UsableUnderwater" value="false"/>
+	<property name="FuelValue" value="27"/>
+	<property name="EconomicValue" value="44"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Damage_type" value="Heat"/>
+	<property name="StickyOffset" value=".7"/>
+	<property name="UnlockedBy" value="perkRangersFlamingArrows"/>
+	<property class="Action1">
+		<property name="Gravity" value="-5"/>
+		<property name="DamageBonus.wood" value="2"/>
+	</property>
+
+	<effect_group name="ammoArrowFlaming" tiered="false"> <!-- ammoArrowFlaming -->
+		<passive_effect name="EntityDamage" operation="base_set" value="25"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="40"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+
+		<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrowDuration" operation="set" value="14">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrowDuration" operation="set" value="15">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+
+		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffBurningFlamingArrow"/>
+
+		<display_value name="dEntityDamageFire" value="120"/>
+		<display_value name="dDuration" value="14"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
+			<requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+		</triggered_effect>
+		<!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
+		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+			<requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+	</effect_group>
 </item>
 
 <!-- Medical Stacks -->
