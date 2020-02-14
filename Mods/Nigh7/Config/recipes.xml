@@ -30,6 +30,10 @@
 	<ingredient name="resourceAnimalFat" count="1"/>
 </recipe>
 
+<recipe name="trapSpikesWoodDmg0" count="1">
+	<ingredient name="resourceWood" count="15"/>
+</recipe>
+
 </append>
 
 </Nigh7>
