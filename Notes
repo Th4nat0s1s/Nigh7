@@ -78,3 +78,8 @@ Sham Sandwich
 Mods and Dyes:
 	Stack 10
 
+Gas Stove:
+	Block Properties - WIP
+	Recipe - Start
+	Fuel Restriction - Start (Look at Generator code)
+	
