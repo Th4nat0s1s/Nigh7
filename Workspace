@@ -134,7 +134,7 @@
 
 <!-- End Oven Code -->
 
-	<property name="CustomIcon" value="gunDartPistol"/>
+<property name="CustomIcon" value="gunDartPistol"/>
 	
 
 
