@@ -66,3 +66,15 @@ Bandages (All):
 
 First Aid Kit:
 	Stack=10 FIN
+
+
+Sham Sandwich
+	Food 35
+	Recipe - Start
+		Egg
+		Cornmeal 3
+		Mushroom 1
+
+Mods and Dyes:
+	Stack 10
+

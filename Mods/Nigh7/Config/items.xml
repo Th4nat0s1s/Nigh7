@@ -58,7 +58,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="360"/>
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="540"/>
 		<passive_effect name="BurstRoundCount" operation="base_set" value="2"/>
 
 		<passive_effect name="MagazineSize" operation="base_set" value="26"/>
@@ -120,7 +120,7 @@
 		<!-- <property name="ApplyBuff" value=".3,.3" param1="buffArrowCriticalBleedout"/> -->
 	</property>
 	<effect_group name="ammoDartIron" tiered="false">
-		<passive_effect name="EntityDamage" operation="base_set" value="45"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="15"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
@@ -265,8 +265,9 @@
 	<property name="EconomicValue" value="700"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
-	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
+	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="10"/>
 	<property name="UnlockedBy" value="meleeToolSteelSetSchematic"/>
+	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".1"/>
