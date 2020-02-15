@@ -135,3 +135,13 @@
 <!-- End Oven Code -->
 
 	<property name="CustomIcon" value="gunDartPistol"/>
+	
+
+
+<set xpath="/items/item/[@name='drinkJarBottledWater']/property[@name'Stacknumber']/@value">50</set>
+
+
+
+
+
+

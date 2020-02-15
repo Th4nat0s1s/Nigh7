@@ -326,6 +326,12 @@
 	
 </item>
 
+<!-- 
+<item name="meleeToolSteelAxe"> <!-- T3 Tools --{}
+	<property name="Extends" param1="Material,RepairTools" value="meleeToolStoneAxe"/>
+	<property name="Material" value="Mmetal_hard"/>
+	<property name="RepairTools" value="resourceForgedSteel"/>
+-->
 <!-- Medical Stacks -->
 
 <item name="drugPainkillers">
