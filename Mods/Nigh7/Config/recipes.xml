@@ -46,6 +46,17 @@
 	<ingredient name="resourceWood" count="15"/>
 </recipe>
 
+<recipe name="meleeToolOmniSteel" count="1" craft_area="workbench" tags="learnable,perkMiner69r">
+	<ingredient name="meleeToolAllSteelParts" count="25"/>
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="resourceWood" count="50"/>
+	<ingredient name="resourceLeather" count="15"/>
+	<ingredient name="resourceDuctTape" count="15"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="meleeToolAllSteelParts,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+
 </append>
 
 </Nigh7>
