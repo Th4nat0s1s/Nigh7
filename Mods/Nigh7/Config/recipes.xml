@@ -1,6 +1,6 @@
 <Nigh7>
 
-<set xpath="/recipes/recipe[@name='trapSpikeWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set>
+<set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set>
 
 <!--
 <recipe name="trapSpikesWoodDmg0" count="1">

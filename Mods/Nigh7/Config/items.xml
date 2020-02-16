@@ -235,7 +235,6 @@
 		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10"/>
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02"/>
 		<!-- these are the triggered effects that worked that I added -->
-	
 	</effect_group>
 </item>
 
@@ -309,12 +308,16 @@
 	
 </item>
 
-<!--
-<item name="meleeToolSteelAxe">
+<!-- <item name="meleeToolSteelAxe">
 	<property name="Extends" param1="Material,RepairTools" value="meleeToolStoneAxe"/>
 	<property name="Material" value="Mmetal_hard"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
 -->
+
+<item name="meleeToolKnifeTanto">
+	<property name="Extends" value="meleeToolKnifeIron"/>
+	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
+</item>
 
 </append>
 
