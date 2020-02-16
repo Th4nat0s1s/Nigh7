@@ -331,7 +331,7 @@
 
 <set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set>
 
-<set xpath="/items/item[ends-with(@name, 'Bandage')]/property[@name='Stacknumber']/@value">25</set>
+<set xpath="/items/item[contains(@name, 'Bandage')]/property[@name='Stacknumber']/@value">25</set>
 
 <set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>
 
