@@ -325,6 +325,8 @@
 
 <set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">25</set>
 
+<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">125</set>
+
 <set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">50</set>
 
 <!-- Medical Stacks -->

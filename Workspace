@@ -180,3 +180,12 @@
 #@modfolder:Resources/ThumperHD.unity3d?ThumperRiflePrefab
 
 #@modfolder:Resources/meleeToolOmniSteel.unity3d?meleeToolOmniSteel
+
+<!-- Adjust Napalm Dart Buff -->
+
+<effect_group tiered="false">
+		<!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
+			<requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+		</triggered_effect>
