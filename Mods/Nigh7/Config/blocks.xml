@@ -19,10 +19,6 @@
 	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> </property>
 	<property name="CanPickup" value="true"/>
 	<property name="TakeDelay" value="25"/>
-	
-	<property name="RuntimeSwitch" value="true"/>
-	<property name="DisplayType" value="blockElectrical"/>
-	<property name="RequiredPower" value="10"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="WorkstationJournalTip" value="heatMapTip"/>

@@ -115,7 +115,7 @@
 		<property name="LifeTime" value="2"/>
 	</property>
 	<property class="Attributes">
-		<property name="EntityDamage" value="12,25"/>
+		<property name="EntityDamage" value="10,21"/>
 		<property name="BlockDamage" value="4,10"/>
 		<!-- <property name="ApplyBuff" value=".3,.3" param1="buffArrowCriticalBleedout"/> -->
 	</property>
@@ -220,40 +220,22 @@
 	<property class="Action1">
 		<property name="Gravity" value="-5"/>
 		<property name="DamageBonus.wood" value="2"/>
-		<property name="Buff" value="buffBurningFlamingArrow"/>
+		<!-- for some reason putting a buff property here didnt work -->
 	</property>
 
-	<effect_group name="ammoArrowFlaming" tiered="false"> <!-- ammoArrowFlaming -->
-		<passive_effect name="EntityDamage" operation="base_set" value="25"/>
+	<effect_group name="ammoDartPistolNapalm" tiered="false"> <!-- ammoArrowFlaming -->
+		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="6"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 		<passive_effect name="ProjectileVelocity" operation="base_set" value="40"/>
 		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
-
-		<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrowDuration" operation="set" value="14">
-			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
-		<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrowDuration" operation="set" value="15">
-			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
-
-		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffBurningFlamingArrow"/>
-
-		<display_value name="dEntityDamageFire" value="120"/>
-		<display_value name="dDuration" value="14"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
-		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
-			<requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
-			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
-		</triggered_effect>
-		<!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
-		<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
-			<requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
-			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
-			<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-		</triggered_effect>
+		
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02"/>
+		<!-- these are the triggered effects that worked that I added -->
+	
 	</effect_group>
 </item>
 
@@ -346,7 +328,7 @@
 
 <set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set>
 
-<set xpath="/items/item[contains(@name, 'bandage')]/property[@name='Stacknumber']/@value">25</set>
+<set xpath="/items/item[ends-with(@name, 'bandage')]/property[@name='Stacknumber']/@value">25</set>
 
 <set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>
 

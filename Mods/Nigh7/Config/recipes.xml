@@ -1,5 +1,13 @@
 <Nigh7>
 
+<set xpath="/recipes/recipe[@name='trapSpikeWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set>
+
+<!--
+<recipe name="trapSpikesWoodDmg0" count="1">
+	<ingredient name="resourceWood" count="15"/>
+</recipe>
+-->
+
 <append xpath="/recipes">
 
 <recipe name="gunDartPistol" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
@@ -40,10 +48,6 @@
 	<ingredient name="foodMoldyBread" count="1"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 	<ingredient name="resourceAnimalFat" count="1"/>
-</recipe>
-
-<recipe name="trapSpikesWoodDmg0" count="1">
-	<ingredient name="resourceWood" count="15"/>
 </recipe>
 
 <recipe name="meleeToolOmniSteel" count="1" craft_area="workbench" tags="learnable,perkMiner69r">
