@@ -1,10 +1,10 @@
 <Nigh7>
-
+<!--
 <set xpath="/items/item/[@name='drinkJarBoiledWater']/property[@name'Stacknumber']/@value">50</set>
+-->
+<!-- New Items -->
 
 <append xpath="/items">
-
-<!-- New Items -->
 
 <item name="gunDartPistol"> <!-- T2 pistols -->
 	<property name="CustomIcon" value="gunDartPistol"/>
@@ -40,7 +40,7 @@
 		<property name="Sound_reload" value="pistol_reload"/>
 		<property name="AutoReload" value="true"/>
 		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/> 
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 	</property>
 	<property class="Action1">
@@ -328,14 +328,18 @@
 	
 </item>
 
-<!-- 
+<!--
 <item name="meleeToolSteelAxe">
 	<property name="Extends" param1="Material,RepairTools" value="meleeToolStoneAxe"/>
 	<property name="Material" value="Mmetal_hard"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
 -->
 
+</append>
+
 <!-- Medical Stacks -->
+
+<append xpath="/items">
 
 <item name="drugPainkillers">
 	<property name="Tags" value="medical"/>
@@ -789,7 +793,50 @@
 	</effect_group>
 </item>
 
+</append>
+
 <!-- Drink Stacks -->
+
+<append xpath="/items">
+
+<item name="drinkJarBoiledWater">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="50"/> <!-- STK drink -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="40"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+		<display_value name="dStaminaRegen" value=".15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="3"/><display_value name="dDysenteryRisk" value=".03"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
 
 <item name="drinkJarPureMineralWater">
 	<property name="HoldType" value="3"/>
@@ -1193,7 +1240,11 @@
 	</effect_group>
 </item>
 
+</append>
+
 <!-- Miscellaneous Adjustments -->
+
+<append xpath="/items">
 
 <item name="resourceCoal">
 	<property name="HoldType" value="45"/>
