@@ -174,3 +174,9 @@
 <set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">5000</set>      
 <set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">5000</set>     
 <set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">5000</set>
+
+<!-- Code for calling new mesh -->
+
+#@modfolder:Resources/ThumperHD.unity3d?ThumperRiflePrefab
+
+#@modfolder:Resources/meleeToolOmniSteel.unity3d?meleeToolOmniSteel

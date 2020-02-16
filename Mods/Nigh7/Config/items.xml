@@ -208,8 +208,8 @@
 	<property name="CustomIcon" value="ammoDartPistolNapalm"/>
 	<property name="Extends" value="ammoArrowIron"/>
 	<property name="DisplayType" value="ammoArrowFlaming"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab.prefab"/>
-	<property name="StickyMeshFile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab.prefab"/>
+	<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+	<property name="StickyMeshFile" value="Entities/Electrical/steel_dartPrefab"/>
 	<property name="UsableUnderwater" value="false"/>
 	<property name="FuelValue" value="27"/>
 	<property name="EconomicValue" value="44"/>
@@ -220,6 +220,7 @@
 	<property class="Action1">
 		<property name="Gravity" value="-5"/>
 		<property name="DamageBonus.wood" value="2"/>
+		<property name="Buff" value="buffBurningFlamingArrow"/>
 	</property>
 
 	<effect_group name="ammoArrowFlaming" tiered="false"> <!-- ammoArrowFlaming -->
