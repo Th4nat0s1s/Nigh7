@@ -1,5 +1,9 @@
 Notes:
 
+!!!Critical!!!
+
+Fix drinkJarRiverWater stack; and drinkCanEmpty stack
+
 !!!NOTES!!! 
 
 <property name="Material" value="??????????"/> <property name="Weight" value="??"/>
