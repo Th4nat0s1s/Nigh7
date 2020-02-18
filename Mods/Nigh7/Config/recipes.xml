@@ -2,12 +2,6 @@
 
 <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set>
 
-<!--
-<recipe name="trapSpikesWoodDmg0" count="1">
-	<ingredient name="resourceWood" count="15"/>
-</recipe>
--->
-
 <append xpath="/recipes">
 
 <recipe name="gunDartPistol" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
