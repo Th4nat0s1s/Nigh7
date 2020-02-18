@@ -2,7 +2,7 @@ Notes:
 
 !!!Critical!!!
 
-Fix drinkJarRiverWater stack; and drinkCanEmpty stack
+Reaper model error "NullReferenceException: Object reference not set to an instance of an object"
 
 !!!NOTES!!! 
 
