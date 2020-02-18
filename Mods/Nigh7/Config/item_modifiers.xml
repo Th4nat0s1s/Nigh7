@@ -1,0 +1,5 @@
+<Nigh7>
+
+<set xpath="/item_modifiers[starts-with(@name, 'mod')]/property[@name='Stacknumber']/@value">5</set>
+
+</Nigh7>
