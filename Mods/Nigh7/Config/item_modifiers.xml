@@ -1,5 +1,13 @@
 <Nigh7>
 
-<set xpath="/item_modifiers[starts-with(@name, 'mod')]/property[@name='Stacknumber']/@value">5</set>
+<set xpath="/item_modifiers/item_modifier[starts-with(@name, 'mod')]/property[@name='Stacknumber']/@value">5</set>
+
+<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+	<item_property_overrides name="gunDartPistol">
+		<property name="SideOffSet" value="0,0,0"/>
+		<property name="SideScale" value=".7,.7,.7"/>
+		<!-- <property name="ZOffSet" value="0.25" -->
+	</item_property_overrides>
+</append>
 
 </Nigh7>
