@@ -4,9 +4,8 @@
 
 <append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
 	<item_property_overrides name="gunDartPistol">
-		<property name="SideOffSet" value="0,0,0"/>
+		<property name="SideOffSet" value="0,0,-5"/>
 		<property name="SideScale" value=".7,.7,.7"/>
-		<!-- <property name="ZOffSet" value="0.25" -->
 	</item_property_overrides>
 </append>
 

@@ -312,6 +312,8 @@
 	<property name="Extends" param1="Material,RepairTools" value="meleeToolStoneAxe"/>
 	<property name="Material" value="Mmetal_hard"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
+	<property name="CustomIcon" value="meleeToolSteelAxe"/>
+	<property name="Meshfile" value="#@modfolder/Resource/meleeToolSteelAxe.unity3d?AXE"/>
 -->
 
 <item name="meleeToolKnifeTanto">
