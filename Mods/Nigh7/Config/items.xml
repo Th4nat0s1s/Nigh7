@@ -4,7 +4,7 @@
 
 <append xpath="/items">
 
-<item name="gunDartPistol"> <!-- T2 pistols -->
+<item name="gunDartPistol">
 	<property name="CustomIcon" value="gunDartPistol"/>
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,selfLoading,attAgility,perkGunslinger,9mmGun,canHaveCosmetic"/>
 	<property name="DisplayType" value="rangedGun"/>
@@ -238,7 +238,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeToolOmniSteel"> <!-- T3 Tools -->
+<item name="meleeToolOmniSteel">
 	<property name="Tags" value="axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="17"/>
@@ -266,8 +266,8 @@
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair"/>
 		<property name="Delay" value=".64"/> <!-- Repair actions still need the delay amount -->
-		<property name="Repair_amount" value="150"/>
-		<property name="Upgrade_hit_offset" value="-1"/>
+		<property name="Repair_amount" value="1000"/>
+		<property name="Upgrade_hit_offset" value="-5"/>
 		<property name="Sound_start" value="repair_block"/>
 		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
@@ -308,19 +308,68 @@
 	
 </item>
 
-<!-- <item name="meleeToolSteelAxe">
-	<property name="Extends" param1="Material,RepairTools" value="meleeToolStoneAxe"/>
-	<property name="Material" value="Mmetal_hard"/>
-	<property name="RepairTools" value="resourceForgedSteel"/>
+<item name="meleeToolSteelAxe">
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
-	<property name="Meshfile" value="#@modfolder/Resource/meleeToolSteelAxe.unity3d?AXE"/>
--->
+	<property name="Extends" value="meleeToolStoneAxe"/>
+	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
+	<property name="RepairTools" value="resourceForgedSteel"/>
+	<property name="EconomicValue" value="500"/>
+	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+		<property name="GrazeStart" value=".15"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="45"/>
+		<property name="SwingAngle" value="135"/>
+		<property name="UseGrazingHits" value="true"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="500"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	
+		<effect_group name="meleeToolSteelAxe">
+		<passive_effect name="EntityDamage" operation="base_set" value="20"/> <!-- meleeToolStoneAxe -->
+		<passive_effect name="BlockDamage" operation="base_set" value="45"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,700" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<display_value name="dBlockRepairAmount" value="225"/>
+		<passive_effect name="HarvestCount" operation="base_set" value=".7" tags="butcherHarvest"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.35" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.15" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="metal"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps,Basics"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
 
 <item name="meleeToolKnifeTanto">
 	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
 	<property name="Extends" value="meleeToolKnifeIron"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
+	
 	
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
