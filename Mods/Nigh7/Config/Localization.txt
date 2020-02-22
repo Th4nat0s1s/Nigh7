@@ -1,0 +1,9 @@
+Key,Source,Context,Changes,English
+
+meleeToolKnifeTanto,items,melee,,"Tanto"
+meleeToolKnifeTantoDesc,items,melee,,"A short knife with a squared tip for punching through armor. Learned from Way of the Ninja.\n\nRepaired with a Repair Kit.\nScraps to Scrap Iron."
+meleeToolKatana,items,melee,,"Katana"
+meleeToolKatanaDesc,items,melee,,"A curved sword used primarily by Samurai in the feudal era of Japan's history.\n\nRepaired with a Repair Kit.\nScraps to Scrap Iron."
+gunDartPistol,items,gun,,"The Injector"
+gunDartPistolDesc,items,gun,,"A pistol invinted by medical personel at the beginning of The Infection. It was used to deliver potential cures to those who had turned from range, but ultimately was repurposed to be used to kill or heal those who where still amongst the living.\n\nRepaired with Repair Kit.\nScraps to Scrap Iron."
+

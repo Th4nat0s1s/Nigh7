@@ -248,8 +248,9 @@
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="10"/>
-	<property name="UnlockedBy" value="meleeToolSteelSetSchematic"/>
+	<property name="UnlockedBy" value="meleeKumosSurvivalGuideSchematic"/>
 	<property name="ShowQuality" value="true"/>
+	
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".1"/>
@@ -263,6 +264,7 @@
 		<property name="SwingAngle" value="135"/>
 		<property name="UseGrazingHits" value="true"/>
 	</property>
+	
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair"/>
 		<property name="Delay" value=".64"/> <!-- Repair actions still need the delay amount -->
@@ -272,6 +274,7 @@
 		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
+	
 	<property name="Group" value="Tools/Traps,Basics"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<effect_group name="meleeToolPickaxeSteel">
@@ -365,11 +368,12 @@
 </item>
 
 <item name="meleeToolKnifeTanto">
+	<property name="DescriptionKey" value="meleeToolKnifeTantoDesc"/>
 	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
 	<property name="Extends" value="meleeToolKnifeIron"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
-	
+	<property name="ShowQuality" value="true"/>
 	
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -454,6 +458,32 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
+
+<item name="meleeToolKatana">
+	<property name="Extends" value="meleeClubBaseballBat"/>
+	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKatanaNoScabbard.unity3d?Sword_NoScabbard"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/meleeToolKatanaScabbard.unity3d?Sword_Scabbard"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="FuelValue" value="0"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="UnlockedBy" value="WayoftheNinjaSchematic"/>
+	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+		<property name="GrazeStart" value=".15"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="45"/>
+		<property name="SwingAngle" value="135"/>
+		<property name="UseGrazingHits" value="true"/>
+	</property>
+	
+</item>
+	
 
 </append>
 

@@ -177,8 +177,6 @@
 
 <!-- Code for calling new mesh -->
 
-#@modfolder:Resources/ThumperHD.unity3d?ThumperRiflePrefab
-
 #@modfolder:Resources/meleeToolOmniSteel.unity3d?meleeToolOmniSteel
 
 <!-- Adjust Napalm Dart Buff -->
