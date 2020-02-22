@@ -1,0 +1,7 @@
+<Nigh7>
+
+<append xpath="/loot/lootgroup[@name='schematicsWeaponsRare']">
+	<item name="WayoftheNinjaSchematic"/>
+</append>
+
+</Nigh7>

@@ -315,7 +315,7 @@
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
 	<property name="Extends" value="meleeToolStoneAxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
-	<property name="RepairTools" value="resourceForgedSteel"/>
+	<property name="RepairTools" value="resourceDuctTape,resourceScrapIron"/>
 	<property name="EconomicValue" value="500"/>
 	
 	<property class="Action0">
@@ -372,6 +372,7 @@
 	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
 	<property name="Extends" value="meleeToolKnifeIron"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
+	<property name="UnlockedBy" value="WayoftheNinjaSchematic"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
 	<property name="ShowQuality" value="true"/>
 	
@@ -483,7 +484,18 @@
 	</property>
 	
 </item>
-	
+
+<item name="WayoftheNinjaSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="meleeClubIron"/>
+	<property name="Unlocks" value="meleeToolKnifeTanto,meleeToolKatana"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKnifeTanto" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKatana" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
 
 </append>
 
