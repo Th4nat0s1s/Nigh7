@@ -6,4 +6,5 @@ meleeToolKatana,items,melee,,"Katana"
 meleeToolKatanaDesc,items,melee,,"A curved sword used primarily by Samurai in the feudal era of Japan's history.\n\nRepaired with a Repair Kit.\nScraps to Scrap Iron."
 gunDartPistol,items,gun,,"The Injector"
 gunDartPistolDesc,items,gun,,"A pistol invinted by medical personel at the beginning of The Infection. It was used to deliver potential cures to those who had turned from range, but ultimately was repurposed to be used to kill or heal those who where still amongst the living.\n\nRepaired with Repair Kit.\nScraps to Scrap Iron."
-
+WayoftheNinjaSchematic,items,schematic,,"Way of the Ninja"
+WayoftheNinjaSchematicDesc,items,schematic,,"Passed down for generations by the Hanzo clan, this makimono depicts the creation and proper use of ninja tools."

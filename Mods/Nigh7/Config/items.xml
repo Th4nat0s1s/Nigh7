@@ -488,7 +488,7 @@
 <item name="WayoftheNinjaSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="meleeClubIron"/>
+	<property name="CustomIcon" value="WayoftheNinjaScroll"/>
 	<property name="Unlocks" value="meleeToolKnifeTanto,meleeToolKatana"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKnifeTanto" operation="set" value="1"/>
