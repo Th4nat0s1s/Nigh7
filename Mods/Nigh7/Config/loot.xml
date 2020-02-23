@@ -2,6 +2,7 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='schematicsWeaponsRare']">
 	<item name="WayoftheNinjaSchematic"/>
+	<item name="meleeKumosGuideSchematic"/>
 </append>
 
 </Nigh7>

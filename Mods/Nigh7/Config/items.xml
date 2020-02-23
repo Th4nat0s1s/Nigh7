@@ -28,6 +28,7 @@
 	<property name="EconomicValue" value="500"/>
 	<property name="UnlockedBy" value="perkGunslinger,gunPistolSchematic"/>
 	<property name="ShowQuality" value="true"/>
+	
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Magazine_items" value="ammoDartPistol,ammoDartPistolHealing,ammoDartPistolNapalm,ammoDartPistolInfect"/>
@@ -41,6 +42,7 @@
 		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/> 
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 	</property>
+	
 	<property class="Action1">
 		<property name="Class" value="Zoom"/>
 		<property name="Zoom_max_out" value="55"/>
@@ -96,6 +98,7 @@
 		<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
 	</effect_group>
+	
 </item>
 
 <item name="ammoDartPistol">
@@ -151,22 +154,26 @@
 	<property name="EconomicValue" value="34"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="DisplayType" value="ammoDart"/>
+	
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="player_bandage"/>
 	</property>
+	
 	<property class="Action1">
-		<property name="Velocity" value="65"/>
-		<property name="Gravity" value="-4"/>
-		<property name="LifeTime" value="2"/>
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
 	</property>
+	
 	<property class="Attributes">
 		<property name="EntityDamage" value="1"/>
 		<property name="BlockDamage" value="3,8"/>
-		<!-- <property name="ApplyBuff" value=".3,.3" param1="buffArrowCriticalBleedout"/> -->
 	</property>
+	
 	<effect_group name="ammoDartIronHealing" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
@@ -174,20 +181,15 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth,stone"/>
 		<passive_effect name="ProjectileVelocity" operation="base_set" value="65"/>
 	</effect_group>
+	
 	<effect_group tiered="false">
-		<!-- used on self -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="10"/> <!-- X -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healthIncrease" operation="set" value="@healthPerkIncrease"/>
-		<display_value name="foodHealthAmount" value="10"/>
-
-		<!-- used on other -->
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="10"/> <!-- X -->
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="40"/> <!-- X -->
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="8">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="8"/> </triggered_effect>
+		
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="40"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="8">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="8"/> </triggered_effect>
 	</effect_group>
 </item>
 
@@ -233,6 +235,7 @@
 		
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
 		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02"/>
 		<!-- these are the triggered effects that worked that I added -->
 	</effect_group>
@@ -248,7 +251,7 @@
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="10"/>
-	<property name="UnlockedBy" value="meleeKumosSurvivalGuideSchematic"/>
+	<property name="UnlockedBy" value="meleeKumosGuideSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	
 	<property class="Action0">
@@ -274,9 +277,7 @@
 		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
-	
-	<property name="Group" value="Tools/Traps,Basics"/>
-	<property name="RepairExpMultiplier" value="5.5"/>
+
 	<effect_group name="meleeToolPickaxeSteel">
 		<passive_effect name="EntityDamage" operation="base_set" value="23.2"/> <!-- meleeToolPickaxeSteel -->
 		<passive_effect name="BlockDamage" operation="base_set" value="62.8"/>
@@ -308,14 +309,19 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/> --> <!-- Possibly messing up damage to blocks -->
 	</effect_group>
+		
+	<property name="Group" value="Tools/Traps,Basics"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
 	
 </item>
 
 <item name="meleeToolSteelAxe">
+	<property name="Tags" value="axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
-	<property name="Extends" value="meleeToolStoneAxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
+	<property name="Extends" value="meleeToolStoneAxe"/>
 	<property name="RepairTools" value="resourceDuctTape,resourceScrapIron"/>
+	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="5"/>
 	<property name="EconomicValue" value="500"/>
 	
 	<property class="Action0">
@@ -341,7 +347,7 @@
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	
-		<effect_group name="meleeToolSteelAxe">
+	<effect_group name="meleeToolSteelAxe">
 		<passive_effect name="EntityDamage" operation="base_set" value="20"/> <!-- meleeToolStoneAxe -->
 		<passive_effect name="BlockDamage" operation="base_set" value="45"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
@@ -363,6 +369,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.15" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="metal"/>
 	</effect_group>
+	
 	<property name="Group" value="Tools/Traps,Basics"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
@@ -462,12 +469,12 @@
 
 <item name="meleeToolKatana">
 	<property name="Extends" value="meleeClubBaseballBat"/>
+	<property name="CustomIcon" value="meleeToolKatana"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKatanaNoScabbard.unity3d?Sword_NoScabbard"/>
 	<property name="DropMeshfile" value="#@modfolder:Resources/meleeToolKatanaScabbard.unity3d?Sword_Scabbard"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="FuelValue" value="0"/>
-	<property name="ShowQuality" value="true"/>
 	<property name="UnlockedBy" value="WayoftheNinjaSchematic"/>
+	<property name="ShowQuality" value="true"/>
 	
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -481,7 +488,121 @@
 		<property name="SwingDegrees" value="45"/>
 		<property name="SwingAngle" value="135"/>
 		<property name="UseGrazingHits" value="true"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
 	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="batwood_swingheavy"/>
+		<property name="Sphere" value=".15"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	
+	<property name="FuelValue" value="0"/>
+	
+</item>
+
+<item name="meleeThrownKunai">
+	<property name="Tags" value="ammo,knife,melee,grunting,light,weapon,meleeWeapon,attPerception"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="36"/>
+	<property name="Meshfile" value="#@modfolder:Resources/meleeThrownKunai.unity3d?Kunai"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spear_sticky.mat"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
+	<property name="EconomicValue" value="15"/>
+	<property name="Stacknumber" value="25"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="IsSticky" value="true"/>
+	<property name="StickyOffset" value=".7"/>
+	<property name="StickyColliderUp" value="1"/>
+	<property name="StickyColliderRadius" value=".1"/>
+	<property name="StickyColliderLength" value="1"/>
+	<property name="StickyForwardDirection" value="0,0,1"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Hitmask_override" value="Melee"/>
+		<property name="Sphere" value=".15"/> <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="spear_fire"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="10"/>
+		<property name="SwingAngle" value="20"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+
+	<property class="Action1">
+		<requirement name="StatCompareCurrent" stat="Stamina" operation="GTE" value="5"/>
+		<property name="Class" value="ThrownWeapon"/>
+		<property name="Hitmask_override" value="Bullet"/>
+		<property name="Delay" value="1.2"/>
+		<property name="Throw_strength_default" value="8"/>
+		<property name="Throw_strength_max" value="50"/>
+		<property name="Max_strain_time" value=".5"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Explosion.ParticleIndex" value="0"/> <!-- no expl. -->
+		<property name="FlyTime" value="0"/>
+		<property name="Gravity" value="-1.5"/> <!-- default is -9.81 -->
+		<property name="LifeTime" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+	</property>
+	
+		<effect_group name="meleeToolKnifeIron">
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolKnifeIron -->
+		<passive_effect name="BlockDamage" operation="base_set" value="2"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/><!-- Gazz change 60 to 120 power attacks are fine as is -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="2.9" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="462,1154" tier="1,6" tags="perkDeepCuts"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<!-- <passive_effect name="DamageModifier" operation="perc_add" value="0" tags="organic"/> affects organic block harvesting based on block.material.damage_category, not animal corpse harvesting -->
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+		<display_value name="dBleeding" value="1"/> <!-- the bleeding proc is run by the perk -->
+	</effect_group>
 	
 </item>
 
@@ -489,10 +610,25 @@
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="WayoftheNinjaScroll"/>
-	<property name="Unlocks" value="meleeToolKnifeTanto,meleeToolKatana"/>
+	<property name="DescriptionKey" value="WayoftheNinjaSchematicDesc"/>
+	<property name="Unlocks" value="meleeToolKnifeTanto,meleeToolKatana,meleeThrownKunai"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKnifeTanto" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKatana" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeThrownKunai" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="meleeKumosGuideSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="meleeKumosGuideSchematic"/>
+	<property name="DescriptionKey" value="meleeKumosGuideSchematicDesc"/>
+	<property name="Unlocks" value="meleeToolOmniSteel,meleeToolSteelAxe"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolOmniSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSteelAxe" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
