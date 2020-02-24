@@ -320,7 +320,7 @@
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
 	<property name="Extends" value="meleeToolStoneAxe"/>
-	<property name="RepairTools" value="resourceDuctTape,resourceScrapIron"/>
+	<property name="RepairTools" value="resourceScrapIron"/>
 	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="5"/>
 	<property name="EconomicValue" value="500"/>
 	
@@ -348,11 +348,11 @@
 	</property>
 	
 	<effect_group name="meleeToolSteelAxe">
-		<passive_effect name="EntityDamage" operation="base_set" value="20"/> <!-- meleeToolStoneAxe -->
-		<passive_effect name="BlockDamage" operation="base_set" value="45"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13"/> <!-- meleeToolStoneAxe -->
+		<passive_effect name="BlockDamage" operation="base_set" value="39"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="8" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,700" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="300,1200" tier="1,6" tags="perkMiner69r"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
@@ -517,6 +517,13 @@
 		</property>
 	</property>
 	
+	<effect_group name="Katana">
+		<passive_effect name="EntityDamage" operation="base_set" value="14"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="4"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+	</effect_group>
+	
 	<property name="FuelValue" value="0"/>
 	
 </item>
@@ -633,6 +640,10 @@
 	</effect_group>
 </item>
 
+</append>
+
+<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+	<property name="Focused_blockname_6" value="faucet02Working"/>
 </append>
 
 <!-- Drink Stacks -->

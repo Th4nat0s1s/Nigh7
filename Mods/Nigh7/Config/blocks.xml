@@ -16,7 +16,9 @@
 	
 	<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
 	<property name="MaxDamage" value="250"/>
-	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> </property>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/> 
+	</property>
 	<property name="CanPickup" value="true"/>
 	<property name="TakeDelay" value="25"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
@@ -35,6 +37,22 @@
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
+</block>
+
+<block name="faucet02Working">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plumbing/faucet02Prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/> 
+	</property>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="24"/>
+	<property name="EconomicValue" value="40"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 </block>
 
 </append>
