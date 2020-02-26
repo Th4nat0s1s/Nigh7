@@ -4,23 +4,31 @@
 
 <append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
 	<item_property_overrides name="gunDartPistol">
-		<property name="SideOffset" value="0,.0075,.03"/>
-		<property name="SideScale" value=".5,.5,.5"/>
+	<!--	<property name="SideOffset" value="0,0,0"/> -->
+		<property name="SideScale" value="0,0,0"/>
 	</item_property_overrides>
 </append>
 
 <append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
 	<item_property_overrides name="gunDartPistol">
-		<property name="ScopeOffset" value="0,.1,.08"/>
-		<property name="ScopeScale" value=".05,.05,.05"/>
-		<property name="ScopeCameraOffset" value="0,-0.035,0"/>
+	<!--	<property name="ScopeOffset" value="0,0,0"/> -->
+		<property name="ScopeScale" value="0,0,0"/>
+		<property name="ScopeCameraOffset" value="0,0,0"/>
+	</item_property_overrides>
+</append>
+
+<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+	<item_property_overrides name="gunCrossbowIronRepeating">
+		<property name="SideOffset" value="0.0,-0.038,0.32"/>
+		<property name="SideScale" value="1,1,1"/>
+		<property name="SideRotation" value="0,0,0"/>
 	</item_property_overrides>
 </append>
 
 <append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
 	<item_property_overrides name="gunDartPistol">
-		<property name="BarrelOffset" value="0,0,0"/>
-		<property name="BarrelScale" value =".7,.7,.7"/>
+	<!--	<property name="BarrelOffset" value="0,0,0"/> -->
+		<property name="BarrelScale" value ="0,0,0"/>
 	</item_property_overrides>
 </append>
 

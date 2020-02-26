@@ -25,6 +25,9 @@ meleeToolOmniSteelDesc,items,melee,,"A tool invented by Kumo for use at the end 
 meleeToolSteelAxe,items,melee,,Kumo's Survival Hatchet
 meleeToolSteelAxeDesc,items,melee,,A hatchet outlined in 'Kumo's Guide to Surviving 'The End'' that works as a handy one-size-fits-all tool for surviving the apocalypse.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.
 ,,,,
-<!-- Edited Perk Descriptions -->,,,,
+<!-- Repeaters -->,,,,
 ,,,,
-perkMiner69rRank4LongDescEdit,progression,Perk,,"You can crack rock with the best of them now. Craft quality 5 great tools, increase tool damage by 40% and block damage by 120%. You also have a nifty idea about a new hatchet to replace your Stone Axe."
+gunCrossbowIronRepeating,items,gun,,Sobek's Repeating Iron Crossbow
+gunCrossbowIronRepeatingDesc,items,gun,,This crossbow design was invinted by Sobek as a way to speed up the firing rate of a crossbow and make it more viable in close range situations.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.\n\nDue to the new Launcher class there is currently no way to stop the full magazine from showing when loading.
+gunCrossbowCompoundRepeating,items,gun,,Sobek's Repeating Compound Crossbow
+gunCrossbowCompoundRepeatingDesc,items,gun,,blah blah blah blah.\n\nRepaired with the Repair Kit.\nScraps down to Forged Steel.\nSame issues as the Iron Crossbow with ammo.

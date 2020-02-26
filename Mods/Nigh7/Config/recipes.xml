@@ -75,11 +75,40 @@
 	</effect_group>
 </recipe>
 
-<recipe name="faucet02Working" count="1" craft_area="workbench" tags="">
+<recipe name="faucet02Working" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceMetalPipe" count ="15"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucet04Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucetBrass02Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="250"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucetBrass04Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapBrass" count="250"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="cntMedicineCabinetFaucetWorking" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+	<ingredient name="resourceBrokenGlass" count="10"/>
 </recipe>
 
 </append>
