@@ -317,8 +317,8 @@
 -->
 
 <item name="meleeToolKnifeTanto">
-	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
-	<property name="Extends" value="meleeToolKnifeIron"/>
+	<property name="CustomIcon" value="meleeWpnBladeT3KnifeTanto"/>
+	<property name="Extends" value="meleeWpnBladeT1HuntingKnife"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
 	
@@ -367,7 +367,7 @@
 		</property>
 	</property>
 	
-	<effect_group name="meleeToolKnifeIron">
+	<effect_group name="meleeWpnT1HuntingKnife">
 		<passive_effect name="EntityDamage" operation="base_set" value="6.1"/> <!-- meleeToolKnifeIron -->
 		<passive_effect name="BlockDamage" operation="base_set" value="5.3"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/><!-- Gazz change 60 to 120 power attacks are fine as is -->
