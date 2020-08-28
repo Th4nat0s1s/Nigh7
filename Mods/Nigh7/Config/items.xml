@@ -315,11 +315,11 @@
 	
 </item>
 
-<item name="meleeToolSteelAxe">
+<item name="meleeToolT3SteelAxe">
 	<property name="Tags" value="axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
-	<property name="Extends" value="meleeToolStoneAxe"/>
+	<property name="Extends" value="meleeToolRepairT0StoneAxe"/>
 	<property name="RepairTools" value="resourceScrapIron"/>
 	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="5"/>
 	<property name="EconomicValue" value="500"/>
@@ -347,7 +347,7 @@
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	
-	<effect_group name="meleeToolSteelAxe">
+	<effect_group name="meleeToolRepairT0StoneAxe">
 		<passive_effect name="EntityDamage" operation="base_set" value="13"/> <!-- meleeToolStoneAxe -->
 		<passive_effect name="BlockDamage" operation="base_set" value="39"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
@@ -374,9 +374,9 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="meleeToolKnifeTanto">
+<item name="meleeWpnT3KnifeTanto">
 	<property name="DescriptionKey" value="meleeToolKnifeTantoDesc"/>
-	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
+	<property name="CustomIcon" value="meleeWpnT3KnifeTanto"/>
 	<property name="Extends" value="meleeToolKnifeIron"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
 	<property name="UnlockedBy" value="WayoftheNinjaSchematic"/>
@@ -627,10 +627,10 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeKumosGuideSchematic"/>
 	<property name="DescriptionKey" value="meleeKumosGuideSchematicDesc"/>
-	<property name="Unlocks" value="meleeToolOmniSteel,meleeToolSteelAxe"/>
+	<property name="Unlocks" value="meleeToolOmniSteel,meleeToolT3SteelAxe"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolOmniSteel" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSteelAxe" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolT3SteelAxe" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
