@@ -315,7 +315,7 @@
 	
 </item>
 
-<item name="meleeToolT3SteelAxe">
+<item name="meleeToolSteelAxe">
 	<property name="Tags" value="axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="CustomIcon" value="meleeToolSteelAxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolSteelAxe.unity3d?AXE"/>
@@ -374,10 +374,10 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="meleeWpnT3KnifeTanto">
+<item name="meleeToolKnifeTanto">
 	<property name="DescriptionKey" value="meleeToolKnifeTantoDesc"/>
-	<property name="CustomIcon" value="meleeWpnT3KnifeTanto"/>
-	<property name="Extends" value="meleeToolKnifeIron"/>
+	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
+	<property name="Extends" value="meleeWpnBladeT1HuntingKnife"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKnifeTanto.unity3d?tanto"/>
 	<property name="UnlockedBy" value="WayoftheNinjaSchematic"/>
 	<property name="RepairTools" value="resourceForgedSteel"/>
@@ -428,7 +428,7 @@
 		</property>
 	</property>
 	
-	<effect_group name="meleeToolKnifeIron">
+	<effect_group name="meleeWpnBladeT1HuntingKnife">
 		<passive_effect name="EntityDamage" operation="base_set" value="6.1"/> <!-- meleeToolKnifeIron -->
 		<passive_effect name="BlockDamage" operation="base_set" value="5.3"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/><!-- Gazz change 60 to 120 power attacks are fine as is -->
@@ -468,7 +468,7 @@
 </item>
 
 <item name="meleeToolKatana">
-	<property name="Extends" value="meleeClubBaseballBat"/>
+	<property name="Extends" value="meleeWpnClubT1BaseballBat"/>
 	<property name="CustomIcon" value="meleeToolKatana"/>
 	<property name="Meshfile" value="#@modfolder:Resources/meleeToolKatanaNoScabbard.unity3d?Sword_NoScabbard"/>
 	<property name="DropMeshfile" value="#@modfolder:Resources/meleeToolKatanaScabbard.unity3d?Sword_Scabbard"/>
@@ -502,7 +502,6 @@
 		<property name="Sphere" value=".15"/>
 		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
 		<property name="UsePowerAttackAnimation" value="true"/>
-
 		<property name="UseGrazingHits" value="true"/>
 		<property name="IsHorizontalSwing" value="true"/>
 		<property name="GrazeStart" value=".25"/>
