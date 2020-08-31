@@ -737,6 +737,7 @@
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="zwhistle"/>
+	</property>
 </item>
 
 </append>
