@@ -721,6 +721,24 @@
 	
 </item>
 
+<item name="zwhistle">
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="EconomicValue" value="100"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Medical"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="zwhistle"/>
+</item>
+
 </append>
 
 <append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
