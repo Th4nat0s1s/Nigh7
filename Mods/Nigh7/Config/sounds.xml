@@ -2,8 +2,9 @@
 
 <append xpath="/Sounds">
 
-<SoundDataNode name="zwhistle"> <AudioSource name="#@modfolder:Resources/zwhistle.unity3d?zwhistle"/>
-	<Noise ID="0" noise="50" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+<SoundDataNode name="zwhistle"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="0" noise="50" time="2" muffled_when_crouched="0.8" heat_map_strength="1" heat_map_time="30"/>
+	<AudioClip ClipName="#@modfolder:Resources/zwhistle.unity3d?zwhistle"/>
 	<LowestPitch name="0.9"/>
 	<HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="1.0"/>
