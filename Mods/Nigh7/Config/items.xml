@@ -740,7 +740,22 @@
 	</property>
 </item>
 
+<item name="fakeLog">
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="FuelValue" value="50"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+</item>
+
 </append>
+
+<!-- Code to make Jars and Buckets work with 'Working Faucets' -->
 
 <append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
 	<property name="Focused_blockname_6" value="faucet02Working"/>
@@ -782,6 +797,7 @@
 <set xpath="/items/item[@name='foodHoney']/property[@name='Stacknumber']/@value">50</set>
 
 <set xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']/@value">25</set>
+
 
 <!-- Miscellaneous Adjustments -->
 

@@ -2,6 +2,8 @@
 
 <append xpath="/blocks">
 
+<!-- Working Oven -->
+
 <block name="campfireOven">
 	<property name="DescriptionKey" value="campfireOven"/>
 	<property name="Class" value="Campfire"/>
@@ -13,9 +15,9 @@
 	<property name="OpenSound" value="UseActions/open_mailbox"/>
 	<property name="CloseSound" value="UseActions/close_mailbox"/>
 	<property name="SortOrder1" value="70i0"/>
-	
 	<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
-	<property name="MaxDamage" value="250"/>
+	<property name="MaxDamage" value="300"/>
+	<property name="RequiredPower" value="15"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="1"/> 
 	</property>
@@ -27,7 +29,7 @@
 	<property name="PickupJournalEntry" value="campfireTip"/>
 	
 	<property class="Workstation">
-		<property name="Modules" value="tools,output,input"/>
+		<property name="Modules" value="tools,fuel,output,input"/>
 		<property name="CraftingAreaRecipes" value="campfire"/>
 	</property>
 	
@@ -35,9 +37,11 @@
 	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
+	<property name="SellableToTrader" value="false"/>1
 	<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
 </block>
+
+<!-- Working Sinks -->
 
 <block name="faucet02Working">
 	<property name="Material" value="Mmetal_thin"/>
@@ -116,6 +120,10 @@
 <block name="utilitySinkWorking">
 	<property name="Extends" value="utilitySink"/>
 </block>
+
+<!-- Unlockable Doors -->
+
+
 
 </append>
 

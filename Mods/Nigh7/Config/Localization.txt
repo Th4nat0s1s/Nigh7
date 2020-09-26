@@ -31,3 +31,12 @@ gunCrossbowIronRepeating,items,gun,,Sobek's Repeating Iron Crossbow
 gunCrossbowIronRepeatingDesc,items,gun,,This crossbow design was invinted by Sobek as a way to speed up the firing rate of a crossbow and make it more viable in close range situations.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.\n\nDue to the new Launcher class there is currently no way to stop the full magazine from showing when loading.
 gunCrossbowCompoundRepeating,items,gun,,Sobek's Repeating Compound Crossbow
 gunCrossbowCompoundRepeatingDesc,items,gun,,blah blah blah blah.\n\nRepaired with the Repair Kit.\nScraps down to Forged Steel.\nSame issues as the Iron Crossbow with ammo.
+,,,,
+<!-- Faucets -->,,,,
+,,,,
+faucet02Working,blocks,,,Tall Chrome Faucet (Working)
+faucet04Working,blocks,,,Short Chrome Faucet (Working)
+faucetBrass02Working,blocks,,,Tall Brass Faucet (Working)
+faucetBrass04Working,blocks,,,Short Brass Faucet (Working)
+cntMedicineCabinetFaucetWorking,blocks,,,Medicine Cabinet Faucet (Working)
+,,,,
