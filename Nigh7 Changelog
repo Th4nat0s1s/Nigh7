@@ -2,14 +2,22 @@ Sob3k's Rebalance
 
 Changelog
 
-=== 0.3 ===
+=== 0.6 ===
 
 - Reduced Wood Spike Trap cost from 20 Wood to 15 Wood
 
 - Added Items
-	Dart Gun
+	The Injector
 	Healing Darts
 	Healing Agent
+	Napalm
+	Napalm Darts
+	Tanto
+	Katana
+	Kunai
+	Survival Shovel
+	Steel Hatchet
+	2 new books!
 	
 - Added Blocks
 	Electric Stove
@@ -41,5 +49,5 @@ Changelog
 	Gpas Forgettin Elixir
 
 - Miscellaneous Adjustments
-	Coal fuel time raised from 00:20 to 02:55
+	Coal fuel time raised from 00:20 to 01:55
 	

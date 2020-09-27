@@ -56,13 +56,59 @@
 </recipe>
 
 <recipe name="meleeToolKnifeTanto" count="1" craft_area="workbench" tags="learnable,perkDeepCuts">
-	<ingredient name="resourceForgedSteel" count="15"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="meleeToolAllSteelParts" count="3"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 	<ingredient name="resourceMilitaryFiber" count ="5"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".1,.5" tags="meleeToolAllSteelParts,resourceForgedSteel,resourceScrapPolymers,resourceMilitaryFiber"/>
 	</effect_group>
+</recipe>
+
+<recipe name="meleeToolSteelAxe" count="1" craft_area="workbench" tags="">
+	<ingredient name="resourceForgedSteel" count="13"/>
+	<ingredient name="meleeToolAllSteelParts" count="3"/>
+	<ingredient name="resourceMilitaryFiber" count="5"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".1,.5" tags="resourceForgedSteel,meleeToolAllSteelParts,resourceMilitaryFiber,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+
+<recipe name="faucet02Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucet04Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucetBrass02Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="250"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="faucetBrass04Working" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapBrass" count="250"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+</recipe>
+
+<recipe name="cntMedicineCabinetFaucetWorking" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceMetalPipe" count ="15"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceForgedIron" count="5"/>
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+	<ingredient name="resourceBrokenGlass" count="10"/>
 </recipe>
 
 </append>

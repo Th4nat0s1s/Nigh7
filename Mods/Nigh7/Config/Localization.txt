@@ -1,0 +1,42 @@
+Key,Source,Context,Changes,English
+,,,,
+<!-- Injector and Darts -->,,,,
+,,,,
+gunDartPistol,items,gun,,The Injector
+gunDartPistolDesc,items,gun,,"A pistol invinted by medical personel at the beginning of The Infection. It was used to deliver potential cures to those who had turned from range, but ultimately was repurposed to be used to kill or heal those who where still amongst the living.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron."
+,,,,
+"<!-- Way of Shadows, Tanto, Katana -->",,,,
+,,,,
+meleeToolKnifeTanto,items,melee,,Tanto
+meleeToolKnifeTantoDesc,items,melee,,A short knife with a squared tip for punching through armor. Learned from Way of the Ninja.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.
+meleeToolKatana,items,melee,,Katana
+meleeToolKatanaDesc,items,melee,,A curved sword used primarily by Samurai in the feudal era of Japan's history.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.
+meleeThrownKunai,items,melee,,Kunai
+meleeThrownKunaiDesc,items,melee,,Used by ninja as a means of misdirection and a way to kill from a distance for those whom were truly skilled.\n\nScraps down to Scrap Iron.
+WayoftheNinjaSchematic,items,schematic,,Way of the Ninja
+WayoftheNinjaSchematicDesc,items,schematic,,"Passed down for generations by the Hanzo clan, this makimono depicts the creation and proper use of ninja tools."
+,,,,
+<!-- Survival Tool and Book -->,,,,
+,,,,
+meleeKumosGuideSchematic,items,schematic,,Kumo's Guide to Surviving 'The End'
+meleeKumosGuideSchematicDesc,items,schematic,,"A guide created by a 'Doomsday Prepper', once thought to be crazy but now that the end is here his survival manuals are highly sought after and have become increasingly rare."
+meleeToolOmniSteel,items,melee,,Kumo's Survival Shovel
+meleeToolOmniSteelDesc,items,melee,,"A tool invented by Kumo for use at the end of days; it serves as an Axe, Pickaxe and Shovel. It's also pretty good at bashing in some dead heads.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron."
+meleeToolSteelAxe,items,melee,,Kumo's Survival Hatchet
+meleeToolSteelAxeDesc,items,melee,,A hatchet outlined in 'Kumo's Guide to Surviving 'The End'' that works as a handy one-size-fits-all tool for surviving the apocalypse.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.
+,,,,
+<!-- Repeaters -->,,,,
+,,,,
+gunCrossbowIronRepeating,items,gun,,Sobek's Repeating Iron Crossbow
+gunCrossbowIronRepeatingDesc,items,gun,,This crossbow design was invinted by Sobek as a way to speed up the firing rate of a crossbow and make it more viable in close range situations.\n\nRepaired with the Repair Kit.\nScraps down to Scrap Iron.\n\nDue to the new Launcher class there is currently no way to stop the full magazine from showing when loading.
+gunCrossbowCompoundRepeating,items,gun,,Sobek's Repeating Compound Crossbow
+gunCrossbowCompoundRepeatingDesc,items,gun,,blah blah blah blah.\n\nRepaired with the Repair Kit.\nScraps down to Forged Steel.\nSame issues as the Iron Crossbow with ammo.
+,,,,
+<!-- Faucets -->,,,,
+,,,,
+faucet02Working,blocks,,,Tall Chrome Faucet (Working)
+faucet04Working,blocks,,,Short Chrome Faucet (Working)
+faucetBrass02Working,blocks,,,Tall Brass Faucet (Working)
+faucetBrass04Working,blocks,,,Short Brass Faucet (Working)
+cntMedicineCabinetFaucetWorking,blocks,,,Medicine Cabinet Faucet (Working)
+,,,,

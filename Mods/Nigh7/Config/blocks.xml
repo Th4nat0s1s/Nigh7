@@ -2,6 +2,8 @@
 
 <append xpath="/blocks">
 
+<!-- Working Oven -->
+
 <block name="campfireOven">
 	<property name="DescriptionKey" value="campfireOven"/>
 	<property name="Class" value="Campfire"/>
@@ -13,10 +15,12 @@
 	<property name="OpenSound" value="UseActions/open_mailbox"/>
 	<property name="CloseSound" value="UseActions/close_mailbox"/>
 	<property name="SortOrder1" value="70i0"/>
-	
 	<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
-	<property name="MaxDamage" value="250"/>
-	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> </property>
+	<property name="MaxDamage" value="300"/>
+	<property name="RequiredPower" value="15"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/> 
+	</property>
 	<property name="CanPickup" value="true"/>
 	<property name="TakeDelay" value="25"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
@@ -25,7 +29,7 @@
 	<property name="PickupJournalEntry" value="campfireTip"/>
 	
 	<property class="Workstation">
-		<property name="Modules" value="tools,output,input"/>
+		<property name="Modules" value="tools,fuel,output,input"/>
 		<property name="CraftingAreaRecipes" value="campfire"/>
 	</property>
 	
@@ -33,9 +37,93 @@
 	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
+	<property name="SellableToTrader" value="false"/>1
 	<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
 </block>
+
+<!-- Working Sinks -->
+
+<block name="faucet02Working">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="CustomIcon" value="faucet02"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plumbing/faucet02Prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/> 
+	</property>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="24"/>
+	<property name="EconomicValue" value="40"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+</block>
+
+<block name="faucet04Working">
+	<property name="Material" value="Mmetal_thin"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="CustomIcon" value="faucet04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plumbing/faucet04Prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/> 
+	</property>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="24"/>
+	<property name="EconomicValue" value="40"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+</block>
+
+<block name="faucetBrass02Working">
+	<property name="Material" value="Mbrass"/>
+	<property name="MeltTimePerUnit" value=".4"/>
+	<property name="Weight" value="63"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="CustomIcon" value="faucetBrass02"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plumbing/faucet_brass02Prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="EconomicValue" value="125"/> <!-- disassemble value -->
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+</block>
+
+<block name="faucetBrass04Working">
+	<property name="Extends" value="faucetBrass02"/>
+	<property name="Model" value="Entities/Plumbing/faucet_brass04Prefab"/>
+	<property name="CustomIcon" value="faucetBrass04"/>
+	<property name="Weight" value="16"/>
+	<property name="EconomicValue" value="80"/> <!-- disassemble value -->
+</block>
+
+<block name="cntMedicineCabinetFaucetWorking">
+	<property name="Extends" value="cntMedicineCabinetFaucetOpen"/>
+	<property name="CustomIcon" value="cntMedicineCabinetFaucetClosed"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="7"/>
+	<property name="Model" value="#Entities/LootContainers?medicine_cabinet_closed_faucetPrefab.prefab"/>
+</block>
+
+<!-- 	<property class="UpgradeBlock"> <property name="ToBlock" value="woodBlock"/> </property>
+</block> -->
+
+<append xpath="//block[@name='utilitySink']">
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="utilitySinkWorking"/>
+	</property>
+</append>
+
+<block name="utilitySinkWorking">
+	<property name="Extends" value="utilitySink"/>
+</block>
+
+<!-- Unlockable Doors -->
+
+
 
 </append>
 
