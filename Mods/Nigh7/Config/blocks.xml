@@ -84,7 +84,8 @@
 	<property name="StabilitySupport" value="false"/>
 	<property name="CustomIcon" value="faucetBrass02"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plumbing/faucet_brass02Prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+	<property name="Model" value="Entities/Plumbing/faucet_brass02Prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="EconomicValue" value="125"/> <!-- disassemble value -->
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
