@@ -1,10 +1,14 @@
 <Nigh7>
 
+<!-- Deep Cuts Edit -->
+
 <append xpath="//perk[@name='perkDeepCuts']">
 	<effect_group>
         <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeToolKnifeTanto"/>
     </effect_group>
 </append>
+
+<!-- Miner69r Progression Edit -->
 
 <append xpath="//perk[@name='perkMiner69r']">
 	<effect_group>
@@ -12,6 +16,8 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="meleeToolOmniSteel"/>
     </effect_group>
 </append>
+
+<!-- Miner 69r Description Edit -->
 
 <set xpath="//perk[@name='perkMiner69r']//effect_description[4]/@long_desc_key">perkMiner69rRank4LongDescEdit</set>
 

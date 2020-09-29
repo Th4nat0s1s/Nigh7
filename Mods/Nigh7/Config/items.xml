@@ -605,6 +605,11 @@
 		<display_value name="dBleeding" value="1"/>
 	</effect_group>
 	
+	<effect_group name="Throw">
+		<passive_effect name="EntityDamage" operation="perc_add" value="2.85" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="2.85" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="36.9" tags="secondary"/>
+	</effect_group>
 </item>
 
 <item name="WayoftheNinjaSchematic">

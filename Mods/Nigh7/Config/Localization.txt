@@ -34,9 +34,18 @@ gunCrossbowCompoundRepeatingDesc,items,gun,,blah blah blah blah.\n\nRepaired wit
 ,,,,
 <!-- Faucets -->,,,,
 ,,,,
-faucet02Working,blocks,,,Tall Chrome Faucet (Working)
-faucet04Working,blocks,,,Short Chrome Faucet (Working)
-faucetBrass02Working,blocks,,,Tall Brass Faucet (Working)
-faucetBrass04Working,blocks,,,Short Brass Faucet (Working)
-cntMedicineCabinetFaucetWorking,blocks,,,Medicine Cabinet Faucet (Working)
+faucet02Working,blocks,,Say hello to indoor plumbing with this magical faucet!,Tall Chrome Faucet (Working)
+faucet04Working,blocks,,Say hello to indoor plumbing with this magical faucet!,Short Chrome Faucet (Working)
+faucetBrass02Working,blocks,,Say hello to indoor plumbing with this magical faucet!,Tall Brass Faucet (Working)
+faucetBrass04Working,blocks,,Say hello to indoor plumbing with this magical faucet!,Short Brass Faucet (Working)
+cntMedicineCabinetFaucetWorking,blocks,,Say hello to indoor plumbing with this magical faucet!,Medicine Cabinet Faucet (Working)
 ,,,,
+<!-- Miner 69er Edit -->,,,,
+,,,,
+perkMiner69rRank4LongDescEdit,perks,,"Same as the Miner69r, but now with a few new tricks thanks to the master survivalist Kumo",
+,,,,
+<!-- Steel Bars -->,,,,
+,,,,
+steelBars,blocks,,You can see and shoot through Steel Bars and they offer excellent protection.,Steel Bars
+steelBarsCentered,blocks,,You can see and shoot through Steel Bars and they offer excellent protection.,Steel Bars Centered
+,,,,	

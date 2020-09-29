@@ -65,13 +65,13 @@
 	</effect_group>
 </recipe>
 
-<recipe name="meleeToolSteelAxe" count="1" craft_area="workbench" tags="">
+<recipe name="meleeToolSteelAxe" count="1" craft_area="workbench" tags="learnable,perkMiner69r">
 	<ingredient name="resourceForgedSteel" count="13"/>
 	<ingredient name="meleeToolAllSteelParts" count="3"/>
 	<ingredient name="resourceMilitaryFiber" count="5"/>
 	<ingredient name="resourceDuctTape" count="5"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".1,.5" tags="resourceForgedSteel,meleeToolAllSteelParts,resourceMilitaryFiber,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedSteel,meleeToolAllSteelParts,resourceMilitaryFiber,resourceDuctTape"/>
 	</effect_group>
 </recipe>
 
@@ -109,6 +109,22 @@
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="meleeToolAllSteelParts" count="1"/>
 	<ingredient name="resourceBrokenGlass" count="10"/>
+</recipe>
+
+<recipe name="steelBars" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="unit_iron" count="200"/>
+	<ingredient name="unit_clay" count="35"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".3,.3,.3,.2,.15" tags="unit_clay,unit_iron"/>
+	</effect_group>
+</recipe>
+
+<recipe name="steelBarsCentered" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="unit_iron" count="200"/>
+	<ingredient name="unit_clay" count="35"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".3,.3,.3,.2,.15" tags="unit_clay,unit_iron"/>
+	</effect_group>
 </recipe>
 
 </append>
