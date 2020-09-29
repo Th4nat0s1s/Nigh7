@@ -375,6 +375,7 @@
 </item>
 
 <item name="meleeToolKnifeTanto">
+	<property name="CustomIcon" value="meleeWpnBladeT3KnifeTanto"/>
 	<property name="DescriptionKey" value="meleeToolKnifeTantoDesc"/>
 	<property name="CustomIcon" value="meleeToolKnifeTanto"/>
 	<property name="Extends" value="meleeWpnBladeT1HuntingKnife"/>
@@ -427,7 +428,8 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
 		</property>
 	</property>
-	
+
+	<effect_group name="meleeWpnT1HuntingKnife">
 	<effect_group name="meleeWpnBladeT1HuntingKnife">
 		<passive_effect name="EntityDamage" operation="base_set" value="6.1"/> <!-- meleeToolKnifeIron -->
 		<passive_effect name="BlockDamage" operation="base_set" value="5.3"/>
